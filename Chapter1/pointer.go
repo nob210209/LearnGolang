@@ -27,6 +27,19 @@ func main() {
 
 	fmt.Println("値渡し：", a)
 	fmt.Println("ポインタ渡し：", b)
+
+	// int型のメモリ割り当て
+	var p *int = new(int)
+
+	// 構造体myStruct型のメモリ割り当て
+	type myStruct struct {
+		a int
+		b int
+	}
+	var my *myStruct = new(myStruct)
+
+	fmt.Println("int型のメモリ割り当て：", p)
+	fmt.Println("構造体myStruct型のメモリ割り当て：", my)
 }
 
 func called(a int, b *int) {
